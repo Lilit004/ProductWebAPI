@@ -1,0 +1,330 @@
+{
+	"info": {
+		"_postman_id": "ca75c6e9-2fc7-479a-be7f-fec70dcb95f0",
+		"name": "ProductAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31756130"
+	},
+	"item": [
+		{
+			"name": "Get Category By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7192/categories/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"categories",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/categories?PageSize={{pageSize}}&PageNumber={{pageNumber}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "PageSize",
+							"value": "{{pageSize}}"
+						},
+						{
+							"key": "PageNumber",
+							"value": "{{pageNumber}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Category1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/categories/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"categories",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"name\" : \"NewCategory1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/categories/update?",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"categories",
+						"update"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7192/categories/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"categories",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7192/products/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"products",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7192/products?PageSize={{PageSize}}&PageNumber={{PageNumber}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "PageSize",
+							"value": "{{PageSize}}"
+						},
+						{
+							"key": "PageNumber",
+							"value": "{{PageNumber}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"TestProduct\",\r\n  \"categoryIds\": [\r\n    5\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/products/add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"name\": \"Product 2\",\r\n  \"categoryIds\": [\r\n    2,4\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7192/products/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"products",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7192/products/{{id}}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7192",
+					"path": [
+						"products",
+						"{{id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
