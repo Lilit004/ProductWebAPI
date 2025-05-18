@@ -1,6 +1,6 @@
 Product & Category API
 
-This project implements a RESTful API for managing products and categories using .NET Core 7 and Entity Framework Core with a Code-First approach. The system allows each product to belong to multiple categories (2 or 3), and it supports pagination for listing products and categories. The database used is SQLite, and the API is documented using Swagger for easy exploration.
+This project is developed using C#. It  implements a RESTful API for managing products and categories using .NET 8 and Entity Framework Core with a Code-First approach. The system allows each product to belong to multiple categories (2 or 3), and it supports pagination for listing products and categories. The database used is SQLite, and the API is documented using Swagger for easy exploration.
 
 Key Features
 
